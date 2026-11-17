@@ -17,8 +17,12 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Generate Gradle Wrapper & Build APK
+      - name: Generate Debug Keystore & Build APK
         run: |
+          keytool -genkey -v -keystore debug.keystore -alias androiddebugkey -keyalg RSA -keysize 2048 -validity 10000 -storepass android -keypass android -dname "CN=Android Debug,O=Android,C=US"
+          mkdir -p ~/.android/
+          cp debug.keystore ~/.android/debug.keystore
+          
           gradle wrapper
           chmod +x gradlew
           ./gradlew assembleDebug
