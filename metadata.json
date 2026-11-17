@@ -1,0 +1,6 @@
+{
+  "name": "Farnad Cell",
+  "description": "Sistem manajemen usaha real-time untuk FARNAD CELL: kasir, manajemen stok barang, transaksi pulsa & layanan digital, absensi foto GPS, dan laporan keuangan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
